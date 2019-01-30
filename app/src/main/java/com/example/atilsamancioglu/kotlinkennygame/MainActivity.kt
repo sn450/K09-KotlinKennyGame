@@ -1,9 +1,9 @@
 package com.example.atilsamancioglu.kotlinkennygame
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+
         }
 
       handler.post(runnable)
@@ -72,6 +73,12 @@ class MainActivity : AppCompatActivity() {
 
     fun increaseScore(view: View) {
         score++
+
+        scoreText.text = "Score: " + score
+    }
+
+    fun bonus(view: View) {
+        score= (score + 5)
 
         scoreText.text = "Score: " + score
     }
